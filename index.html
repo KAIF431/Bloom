@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>A Moment of Calm • Scroll to Bloom</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  
+  <!-- Premium Fonts (Playfair Display for poetic elegance, Inter for clean modern UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fullscreen WebGL / Realistic Canvas -->
+  <canvas id="flowerCanvas"></canvas>
+
+  <!-- Sound Ambience Toggle (Corner) -->
+  <div class="audio-control" id="audioToggle" title="Toggle Peaceful Ambience">
+    <div class="sound-wave-icon">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="audio-label">Sound</span>
+  </div>
+
+  <!-- Scroll Progress Indicator Line (Right edge) -->
+  <div class="scroll-tracker">
+    <div class="scroll-indicator-bar" id="scrollIndicator"></div>
+  </div>
+
+  <!-- Main Scroll Container to create the scroll journey -->
+  <div class="scroll-wrapper">
+    
+    <!-- Stage 1: The Quiet Beginning -->
+    <section class="story-section section-intro" id="section1">
+      <div class="content-box">
+        <span class="sub-badge">A MOMENT TO PAUSE</span>
+        <h1 class="main-title">Breathe</h1>
+        <p class="tagline">Scroll slowly to begin...</p>
+        <div class="scroll-hint">
+          <div class="mouse-icon">
+            <div class="wheel"></div>
+          </div>
+          <span>Scroll down</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stage 2: The Sprout & Growth -->
+    <section class="story-section section-sprout" id="section2">
+      <div class="content-box glass-pill">
+        <span class="step-num">01</span>
+        <p class="step-text">From quiet roots, life finds its path upward.</p>
+      </div>
+    </section>
+
+    <!-- Stage 3: The Budding Form -->
+    <section class="story-section section-bud" id="section3">
+      <div class="content-box glass-pill">
+        <span class="step-num">02</span>
+        <p class="step-text">Patience holds the quietest strength.</p>
+      </div>
+    </section>
+
+    <!-- Stage 4: The Unfolding Bloom -->
+    <section class="story-section section-unfold" id="section4">
+      <div class="content-box glass-pill">
+        <span class="step-num">03</span>
+        <p class="step-text">Every petal opens in its own destined time.</p>
+      </div>
+    </section>
+
+    <!-- Stage 5: The Final Climax & Heartfelt Message Card -->
+    <section class="story-section section-final" id="section5">
+      <div class="final-card" id="finalCard">
+        <div class="card-ornament">✦</div>
+        <p class="card-opening">In the middle of a busy day and endless deadlines, take a moment to breathe.</p>
+        <div class="card-divider"></div>
+        <p class="card-wishes">May your day be light, your heart at ease, and may you always find reasons to smile.</p>
+        
+        <div class="card-actions">
+          <button id="replayBtn" class="replay-button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+              <path d="M3 3v5h5"/>
+            </svg>
+            <span>Experience Again</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
